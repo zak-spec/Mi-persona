@@ -1,15 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Mingzat&family=Noto+Sans+Hanunoo&family=Pixelify+Sans:wght@400..700&display=swap');
+
 * {
-    margin: 0;
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-size: 20px;
     color: aliceblue;
+}
+
+body{
     font-family: "Baskervville SC", serif;
     font-weight: 400;
     font-style: normal;
 }
-
-
 a{
     text-decoration: none;
     color: inherit;
@@ -175,3 +178,7 @@ ul {
 .code{
     cursor: help;
 }
+
+/* .emo:hover{
+    background-color: black;
+} */
