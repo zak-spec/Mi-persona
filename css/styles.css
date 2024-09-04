@@ -1,76 +1,86 @@
+/* Importar fuentes desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Mingzat&family=Noto+Sans+Hanunoo&family=Pixelify+Sans:wght@400..700&display=swap');
 
+/* Estilos generales */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-size: 20px;
-    color: aliceblue;
+  
 }
 
-body{
+body {
     font-family: "Baskervville SC", serif;
     font-weight: 400;
     font-style: normal;
+    background: black; /* Fondo negro para el cuerpo */
+    color: aliceblue;
+    opacity: 10; /* 50% de transparencia */
+
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
     margin-right: 10px;
 }
+
 ul {
     display: flex;
     flex-direction: row;
     list-style: none;
-    gap: 200px;
-    justify-content: end;
+    gap: 200px; /* Espacio entre elementos de la lista */
+    justify-content: end; /* Alinear a la derecha */
+}
 
+.cont {
+    position: relative;
+    padding: 20px 150px; /* Padding superior/inferior y lateral */
+    overflow: hidden; /* Evitar barras de desplazamiento */
+    z-index: 1;
 }
-.cont{
-    /* width: 100%;
-    height: 100%; */
-    padding: 20px;
-    padding-left: 150px;
-    background-color: rgb(0, 0, 0);
-    padding-right: 150px;
+
+#c {
+    position: absolute; /* Para que el canvas se superponga al div */
+    top: 0;
+    left: 0;
+    z-index: 0; /* Asegura que el canvas esté detrás del contenido */
+    height: 100%;
 }
-.container{
+
+.container {
+    position: relative;
     background-color: rgb(44, 62, 80);
     padding: 10px;
-    /* height: 100vh; */
     display: flex;
-    /* justify-content: center; 
-    align-items: center;  */
     flex-direction: column;
     border-radius: 50px;
     gap: 30px;
+    z-index: 1;
 }
 
-.container-2{
-    /* position: relative;
-    bottom: 300px; */
-    margin-top:50px ;
+.container-2 {
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color: aliceblue;
 }
-
-.img-cir{
+.code:hover {
+    color: #00ff00; /* Color verde */
+}
+.img-cir {
     height: 100px;
     width: 100px;
-    margin-right:10px ;
+    margin-right: 30px;
     border-radius: 50px;
+    transition: transform 0.5s ease; /* Suavizar la transición */
 }
-.primera-v22{
+
+.primera-v22 {
     flex-direction: column;
 }
-/* .container-3{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-} */
+
 .container-4 {
     position: relative;
     left: 200px;
@@ -85,7 +95,6 @@ ul {
 }
 
 .uno {
-
     grid-area: uno;
 }
 
@@ -101,32 +110,27 @@ ul {
     grid-area: cuatro;
 }
 
-.uno, .dos,.tres,.cuatro{
-    /* margin-top: 10px; */
+.uno, .dos, .tres, .cuatro {
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    /* height: 100px; 
-    width: 400px;  */
     background-color: rgb(86, 101, 115);
-    gap: 0px;
-    padding: 0px;
+    gap: 0;
+    padding: 20px; /* Padding interno */
     text-align: justify; /* Justificar el texto */
     margin-top: 20px;
-
-
 }
 
-.titulo{
-    border: solid red;
+.titulo {
+    border: dashed rgb(27, 196, 106);
     position: relative;
     right: 180px;
     bottom: 30px;
     font-size: 20px;
-    color: aliceblue;
     border-radius: 50px;
 }
+
 .img-nor {
     position: relative;
     left: 120px;
@@ -134,51 +138,168 @@ ul {
     width: 300px;
     float: left;
     border-radius: 50px;
-    -webkit-box-shadow: 9px -10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 9px -10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 9px -10px 5px 0px rgba(0,0,0,0.75);
-}
-.container-3{
-    width: 500px;
-    margin-left: 200px;
-    width: 800px;
+    box-shadow: 9px -10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.container-v32{
+.container-3 {
+    width: 800px; /* Ancho de la tercera contenedor */
+    margin-left: 200px; /* Margen izquierdo */
+}
+
+.container-v32 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* gap: 10px; */
-    /* margin-top: 10px; */
-    border: solid rgb(33, 47, 61 );
-    border-width: 5px; /* Ajusta el grosor del borde */  
+    border: solid rgb(33, 47, 61);
+    border-width: 5px; /* Grosor del borde */
     border-radius: 50px;
-    padding: 10px;
+    padding: 20px; /* Padding interno */
     background-color: rgb(86, 101, 115);
 }
-
-.t{
-    padding-right: 0px;
+.sobre_mi {
+width: 200px;
+    border: dashed rgb(27, 196, 106);
+    padding-right: 0;
     text-align: justify;
+    padding: 20px; /* Padding interno */
+border-radius: 50px;
+margin: 10px;
+}
+.t {
+
+    padding-right: 0;
+    text-align: justify;
+    padding: 20px; /* Padding interno */
 }
 
 .img-botton {
     height: 50px;
     width: 50px;
-    /* border: solid red; */
     border-radius: 50px;
     cursor: pointer;
-
 }
-.emo{
+
+.emo {
     border-radius: 100px;
     cursor: pointer;
 }
-.code{
+
+.code {
     cursor: help;
 }
 
-/* .emo:hover{
-    background-color: black;
-} */
+canvas {
+    display: block; /* Mostrar el canvas como bloque */
+}
+
+.img-cir:hover {
+    transform: scale(1.5); /* Agrandar el círculo al 150% de su tamaño original */
+    margin-right: 30px; /* Margen derecho al hacer hover */
+}
+
+
+@media only screen and (max-width: 599px) {
+    ul {
+        flex-direction: column; /* Cambiar a columna en móviles */
+        gap: 20px; /* Reducir el espacio entre elementos */
+        justify-content: center; /* Centrar elementos */
+    }
+
+    .cont {
+        padding-left: 20px; /* Reducir el padding */
+        padding-right: 20px; /* Reducir el padding */
+    }
+
+    .container-4 {
+        left: 0; /* Alinear a la izquierda */
+        width: 100%; /* Ancho completo */
+        grid-template-areas:
+            "uno"
+            "dos"
+            "tres"
+            "cuatro"; /* Cambiar a una sola columna */
+    }
+
+    .img-cir {
+        height: 80px; /* Reducir tamaño de imagen */
+        width: 80px; /* Reducir tamaño de imagen */
+        margin-right: 0; /* Eliminar margen derecho */
+        margin-bottom: 10px; /* Añadir margen inferior */
+    }
+
+    .titulo {
+        right: 0; /* Alinear a la derecha */
+        bottom: 0; /* Alinear a la parte inferior */
+        font-size: 18px; /* Reducir tamaño de fuente */
+    }
+
+    .img-nor {
+        left: 0; /* Alinear a la izquierda */
+        height: 200px; /* Reducir tamaño de imagen */
+        width: 200px; /* Reducir tamaño de imagen */
+    }
+
+    .container-3 {
+        width: 100%; /* Ancho completo */
+        margin-left: 0; /* Eliminar margen izquierdo */
+    }
+
+    .container-v32 {
+        flex-direction: column; /* Cambiar a columna en móviles */
+        padding: 5px; /* Reducir padding */
+    }
+
+}
+/* Estilos para tablets */
+@media only screen and (min-width: 601px) and (max-width: 1314px) {
+    ul {
+        flex-direction: row; /* Mantener en fila para tablets */
+        gap: 50px; /* Ajustar el espacio entre elementos */
+        justify-content: center; /* Centrar elementos */
+    }
+
+    .cont {
+        padding-left: 50px; /* Ajustar el padding izquierdo */
+        padding-right: 50px; /* Ajustar el padding derecho */
+    }
+
+    .container-4 {
+        left: 0; /* Alinear a la izquierda */
+        width: 90%; /* Ancho casi completo */
+        grid-template-areas: 
+            "uno dos"
+            "tres cuatro"; /* Mantener la estructura de dos columnas */
+    }
+
+    .img-cir {
+        height: 90px; /* Ajustar tamaño de imagen */
+        width: 90px; /* Ajustar tamaño de imagen */
+        margin-right: 15px; /* Ajustar margen derecho */
+    }
+
+    .titulo {
+        right: 100px; /* Ajustar posición a la derecha */
+        bottom: 20px; /* Ajustar posición desde abajo */
+        font-size: 19px; /* Ajustar tamaño de fuente */
+    }
+
+    .img-nor {
+        left: 50px; /* Ajustar posición a la izquierda */
+        height: 250px; /* Ajustar tamaño de imagen */
+        width: 250px; /* Ajustar tamaño de imagen */
+    }
+
+    .container-3 {
+        width: 90%; /* Ancho casi completo */
+        margin-left: 0; /* Eliminar margen izquierdo */
+    }
+
+    .container-v32 {
+        flex-direction: row; /* Mantener en fila para tablets */
+        padding: 10px; /* Ajustar padding */
+    }
+    .uno,.dos,.tres,.cuatro,.container-3 {
+        margin-left: 50px; /* Ajustar padding */
+    }
+}
