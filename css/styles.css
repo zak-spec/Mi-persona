@@ -183,10 +183,15 @@ margin: 10px;
 .emo {
     border-radius: 100px;
     cursor: pointer;
+
+        text-decoration: underline;
+    
 }
+
 
 .code {
     cursor: help;
+    text-decoration: underline;
 }
 
 canvas {
